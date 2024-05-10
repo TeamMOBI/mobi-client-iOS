@@ -7,7 +7,7 @@
 
 import UIKit
 
-class TabBarController: UITabBarController, UITabBarControllerDelegate {
+class TabBarController: UITabBarController {
 
     // MARK: - View Life Cycle
     
@@ -20,57 +20,37 @@ class TabBarController: UITabBarController, UITabBarControllerDelegate {
     // MARK: - Custom Methods
     
     private func setViewControllers() {
-        let homeVC = makeNavigationController(
-            unselectedImage: UIImage.TabBar.home,
-            selectedImage: UIImage.TabBar.home,
-            rootViewController: HomeViewController(), title: "홈")
+        let viewControllers = TabBarItem.allCases
+            .map { navigationController(with: $0, rootViewController: $0.rootViewController) }
         
-        let searchVC = makeNavigationController(
-            unselectedImage: UIImage.TabBar.search,
-            selectedImage: UIImage.TabBar.search,
-            rootViewController: SearchViewController(), title: "검색")
-        
-        let mypageVC = makeNavigationController(
-            unselectedImage: UIImage.TabBar.mypage,
-            selectedImage: UIImage.TabBar.mypage,
-            rootViewController: MyPageViewController(), title: "마이")
-        
-        viewControllers = [homeVC, searchVC, mypageVC]
+        self.viewControllers = viewControllers
     }
     
-    private func setTabBar() {
-        let tabBarAppearance = UITabBarAppearance()
-        tabBarAppearance.configureWithTransparentBackground()
-        tabBar.standardAppearance = tabBarAppearance
-        tabBar.scrollEdgeAppearance = tabBarAppearance
-        
-        tabBar.backgroundColor = .gray05
-        tabBar.tintColor = .gray01
-        tabBar.unselectedItemTintColor = .gray03
-        tabBar.layer.cornerRadius = 20
-        tabBar.layer.masksToBounds = true
-        self.delegate = self
-    }
-    
-    private func makeNavigationController(unselectedImage: UIImage?, selectedImage: UIImage?, rootViewController: UIViewController, title: String) -> UINavigationController {
-        
+    private func navigationController(
+        with item: TabBarItem,
+        rootViewController: UIViewController
+    ) -> UINavigationController {
         let nav = UINavigationController(rootViewController: rootViewController)
-        nav.tabBarItem.image = unselectedImage
-        nav.tabBarItem.selectedImage = selectedImage
-        nav.tabBarItem.title = title
         
-        nav.navigationBar.tintColor = .gray01
-        nav.navigationBar.backgroundColor = .gray05
+        nav.tabBarItem.image = item.image
+        nav.tabBarItem.title = item.title
+        nav.tabBarItem.setTitleTextAttributes([.font: UIFont.font(.bold, ofSize: 14)], for: .normal)
+        nav.tabBarItem.imageInsets = UIEdgeInsets(top: 3, left: 45, bottom: 3, right: 45)
+        nav.navigationBar.backgroundColor = .clear
         nav.isNavigationBarHidden = true
         nav.navigationBar.isHidden = true
-        nav.tabBarItem.setTitleTextAttributes([.font: UIFont.font(.bold, ofSize: 13)], for: .normal)
-        nav.navigationItem.backBarButtonItem = UIBarButtonItem(title: nil, style: .plain, target: self, action: nil)
-        nav.navigationItem.backBarButtonItem?.tintColor = .black
-        
         nav.interactivePopGestureRecognizer?.isEnabled = true
         nav.interactivePopGestureRecognizer?.delegate = self
         
         return nav
+    }
+    
+    private func setTabBar() {
+        tabBar.backgroundColor = .mobi_gray05
+        tabBar.tintColor = .mobi_gray01
+        tabBar.unselectedItemTintColor = .mobi_gray03
+        tabBar.layer.cornerRadius = 20
+        tabBar.backgroundImage = UIImage()
     }
 }
 

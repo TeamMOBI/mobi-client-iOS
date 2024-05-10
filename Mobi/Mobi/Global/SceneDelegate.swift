@@ -9,15 +9,14 @@ import UIKit
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
-    
+
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
-        guard (scene is UIWindowScene) else { return }
-        guard let windowScene = (scene as? UIWindowScene) else { return }
         
+        guard let windowScene = (scene as? UIWindowScene) else { return }
         let window = UIWindow(windowScene: windowScene)
-        let nav = UINavigationController(rootViewController: TabBarController())
-        window.rootViewController = nav
         self.window = window
+        let tabBarController = TabBarController()
+        window.rootViewController = tabBarController
         window.makeKeyAndVisible()
     }
     

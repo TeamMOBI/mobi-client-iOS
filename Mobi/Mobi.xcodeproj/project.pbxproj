@@ -37,6 +37,7 @@
 		14E179372BEE181000E9909F /* PlaceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14E179362BEE181000E9909F /* PlaceModel.swift */; };
 		14E1793A2BEE199B00E9909F /* UIView +.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14E179392BEE199B00E9909F /* UIView +.swift */; };
 		14E1793C2BEE1E2F00E9909F /* Pretendard-SemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 14E1793B2BEE1E2F00E9909F /* Pretendard-SemiBold.otf */; };
+		14E1793E2BEE326D00E9909F /* TabBarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14E1793D2BEE326D00E9909F /* TabBarItem.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -65,6 +66,7 @@
 		14E179362BEE181000E9909F /* PlaceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceModel.swift; sourceTree = "<group>"; };
 		14E179392BEE199B00E9909F /* UIView +.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView +.swift"; sourceTree = "<group>"; };
 		14E1793B2BEE1E2F00E9909F /* Pretendard-SemiBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-SemiBold.otf"; sourceTree = "<group>"; };
+		14E1793D2BEE326D00E9909F /* TabBarItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarItem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -176,6 +178,7 @@
 			isa = PBXGroup;
 			children = (
 				1475E23C2BEC949A0028D684 /* TabBarController.swift */,
+				14E1793D2BEE326D00E9909F /* TabBarItem.swift */,
 			);
 			path = TabBar;
 			sourceTree = "<group>";
@@ -292,6 +295,7 @@
 				14E179372BEE181000E9909F /* PlaceModel.swift in Sources */,
 				14E179172BED0EAF00E9909F /* UIFont+.swift in Sources */,
 				14E179052BED076500E9909F /* Color+.swift in Sources */,
+				14E1793E2BEE326D00E9909F /* TabBarItem.swift in Sources */,
 				14E179022BED057600E9909F /* MyPageViewController.swift in Sources */,
 				1475E22D2BEC93A60028D684 /* HomeViewControllerController.swift in Sources */,
 				1475E23D2BEC949A0028D684 /* TabBarController.swift in Sources */,
@@ -457,7 +461,6 @@
 				INFOPLIST_FILE = Mobi/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -485,7 +488,6 @@
 				INFOPLIST_FILE = Mobi/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
