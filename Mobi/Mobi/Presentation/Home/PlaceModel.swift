@@ -25,18 +25,18 @@ struct PlaceModel {
 
 let testDummy: [PlaceModel] = [
     PlaceModel(image: .hongdae, name: "홍대", meter: "65m", roadTraffic: "도로교통 서행", population: "붐빔"),
+    PlaceModel(image: .hongdae, name: "이태원", meter: "65m", roadTraffic: "도로교통 서행", population: "보통"),
+    PlaceModel(image: .hongdae, name: "홍대", meter: "65m", roadTraffic: "도로교통 서행", population: "여유"),
     PlaceModel(image: .hongdae, name: "이태원", meter: "65m", roadTraffic: "도로교통 서행", population: "붐빔"),
+    PlaceModel(image: .hongdae, name: "상수", meter: "65m", roadTraffic: "도로교통 서행", population: "보통"),
+    PlaceModel(image: .hongdae, name: "홍대", meter: "65m", roadTraffic: "도로교통 서행", population: "붐빔"),
+    PlaceModel(image: .hongdae, name: "이태원", meter: "65m", roadTraffic: "도로교통 서행", population: "여유"),
     PlaceModel(image: .hongdae, name: "홍대", meter: "65m", roadTraffic: "도로교통 서행", population: "붐빔"),
     PlaceModel(image: .hongdae, name: "이태원", meter: "65m", roadTraffic: "도로교통 서행", population: "붐빔"),
     PlaceModel(image: .hongdae, name: "상수", meter: "65m", roadTraffic: "도로교통 서행", population: "붐빔"),
-    PlaceModel(image: .hongdae, name: "홍대", meter: "65m", roadTraffic: "도로교통 서행", population: "붐빔"),
+    PlaceModel(image: .hongdae, name: "홍대", meter: "65m", roadTraffic: "도로교통 서행", population: "약간붐빔"),
     PlaceModel(image: .hongdae, name: "이태원", meter: "65m", roadTraffic: "도로교통 서행", population: "붐빔"),
-    PlaceModel(image: .hongdae, name: "홍대", meter: "65m", roadTraffic: "도로교통 서행", population: "붐빔"),
-    PlaceModel(image: .hongdae, name: "이태원", meter: "65m", roadTraffic: "도로교통 서행", population: "붐빔"),
-    PlaceModel(image: .hongdae, name: "상수", meter: "65m", roadTraffic: "도로교통 서행", population: "붐빔"),
-    PlaceModel(image: .hongdae, name: "홍대", meter: "65m", roadTraffic: "도로교통 서행", population: "붐빔"),
-    PlaceModel(image: .hongdae, name: "이태원", meter: "65m", roadTraffic: "도로교통 서행", population: "붐빔"),
-    PlaceModel(image: .hongdae, name: "홍대", meter: "65m", roadTraffic: "도로교통 서행", population: "붐빔"),
+    PlaceModel(image: .hongdae, name: "홍대", meter: "65m", roadTraffic: "도로교통 서행", population: "보통"),
     PlaceModel(image: .hongdae, name: "이태원", meter: "65m", roadTraffic: "도로교통 서행", population: "붐빔"),
     PlaceModel(image: .hongdae, name: "상수", meter: "65m", roadTraffic: "도로교통 서행", population: "붐빔")
 ]
