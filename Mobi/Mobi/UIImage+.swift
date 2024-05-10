@@ -16,9 +16,14 @@ public extension UIImage {
     
     enum Icn {
         public static let location = UIImage(name: "location")
+        
+        public static let home = UIImage(name: "home")
+        public static let search = UIImage(name: "search")
+        public static let mypage = UIImage(name: "mypage")
     }
     
     enum Img {
+        public static let mobi_logo_small = UIImage(name: "mobi_logo_small")
         public static let mobi_logo = UIImage(name: "mobi_logo")
     }
     
