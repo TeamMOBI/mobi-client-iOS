@@ -10,6 +10,8 @@ import SnapKit
 
 class HomeViewController: UIViewController {
 
+    private let naviBar = UIView()
+    
     private lazy var collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .vertical
@@ -24,6 +26,7 @@ class HomeViewController: UIViewController {
         super.viewDidLoad()
         registerCells()
         setDelegate()
+        setUI()
         setLayout()
     }
 
@@ -35,13 +38,29 @@ class HomeViewController: UIViewController {
         collectionView.delegate = self
         collectionView.dataSource = self
     }
+    
+    private func setUI() {
+        naviBar.backgroundColor = .clear
+    }
 
     private func setLayout() {
-        view.backgroundColor = .white
-        view.addSubviews(collectionView)
+        view.backgroundColor = .black
+        view.addSubviews(naviBar, collectionView)
         
+        let mobiLogoImageView = UIImageView(image: .mobiLogoSmall)
+        naviBar.addSubview(mobiLogoImageView)
+        naviBar.snp.makeConstraints { make in
+            make.top.leading.trailing.equalTo(view.safeAreaLayoutGuide)
+            make.height.equalTo(56)
+        }
+        
+        mobiLogoImageView.snp.makeConstraints { make in
+            make.leading.equalTo(10)
+            make.centerY.equalToSuperview()
+        }
+
         collectionView.snp.makeConstraints { make in
-            make.top.equalToSuperview() /// navigation 추가시 변경
+            make.top.equalTo(naviBar.snp.bottom) /// navigation 추가시 변경
             make.leading.trailing.bottom.equalToSuperview()
         }
     }
