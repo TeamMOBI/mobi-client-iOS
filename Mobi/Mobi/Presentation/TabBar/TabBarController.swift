@@ -20,7 +20,6 @@ class TabBarController: UITabBarController, UITabBarControllerDelegate {
     // MARK: - Custom Methods
     
     private func setViewControllers() {
-
         let homeVC = makeNavigationController(
             unselectedImage: UIImage.TabBar.home,
             selectedImage: UIImage.TabBar.home,
@@ -40,6 +39,11 @@ class TabBarController: UITabBarController, UITabBarControllerDelegate {
     }
     
     private func setTabBar() {
+        let tabBarAppearance = UITabBarAppearance()
+        tabBarAppearance.configureWithTransparentBackground()
+        tabBar.standardAppearance = tabBarAppearance
+        tabBar.scrollEdgeAppearance = tabBarAppearance
+        
         tabBar.backgroundColor = .gray05
         tabBar.tintColor = .gray01
         tabBar.unselectedItemTintColor = .gray03
