@@ -40,9 +40,9 @@ class TabBarController: UITabBarController, UITabBarControllerDelegate {
     }
     
     private func setTabBar() {
-        tabBar.backgroundColor = .gray800
-        tabBar.tintColor = .gray0
-        tabBar.unselectedItemTintColor = .gray500
+        tabBar.backgroundColor = .gray05
+        tabBar.tintColor = .gray01
+        tabBar.unselectedItemTintColor = .gray03
         
         self.delegate = self
     }
@@ -54,8 +54,8 @@ class TabBarController: UITabBarController, UITabBarControllerDelegate {
         nav.tabBarItem.selectedImage = selectedImage
         nav.tabBarItem.title = title
         
-        nav.navigationBar.tintColor = .gray0
-        nav.navigationBar.backgroundColor = .gray800
+        nav.navigationBar.tintColor = .gray01
+        nav.navigationBar.backgroundColor = .gray05
         nav.isNavigationBarHidden = true
         nav.navigationBar.isHidden = true
         nav.tabBarItem.setTitleTextAttributes([.font: UIFont.font(.semibold, ofSize: 11)], for: .normal)
