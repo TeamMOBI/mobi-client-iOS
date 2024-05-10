@@ -20,17 +20,10 @@ public extension UIImage {
     
     enum Img {
         public static let mobi_logo = UIImage(name: "mobi_logo")
-        public static let canvas_money_complete_lv3 = UIImage(name:"road_background_lv3")
     }
     
-    enum Btn {
-        public static let close     = UIImage(name: "btn_close")
-        public static let back      = UIImage(name: "btn_back")
-        public static let floating  = UIImage(name: "btn_floating")
-        public static let btn_plus  = UIImage(name: "btn_plus")
-        public static let more  = UIImage(name: "btn_more")
-        public static let plus  = UIImage(name: "btn_plus")
-        public static let setting  = UIImage(name: "btn_setting")
+    enum Test {
+        public static let hongdae = UIImage(name: "hongdae")
     }
 }
 
