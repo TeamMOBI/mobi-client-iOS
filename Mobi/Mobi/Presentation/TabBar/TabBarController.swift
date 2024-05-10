@@ -43,7 +43,8 @@ class TabBarController: UITabBarController, UITabBarControllerDelegate {
         tabBar.backgroundColor = .gray05
         tabBar.tintColor = .gray01
         tabBar.unselectedItemTintColor = .gray03
-        
+        tabBar.layer.cornerRadius = 20
+        tabBar.layer.masksToBounds = true
         self.delegate = self
     }
     
@@ -58,7 +59,7 @@ class TabBarController: UITabBarController, UITabBarControllerDelegate {
         nav.navigationBar.backgroundColor = .gray05
         nav.isNavigationBarHidden = true
         nav.navigationBar.isHidden = true
-        nav.tabBarItem.setTitleTextAttributes([.font: UIFont.font(.semibold, ofSize: 11)], for: .normal)
+        nav.tabBarItem.setTitleTextAttributes([.font: UIFont.font(.bold, ofSize: 13)], for: .normal)
         nav.navigationItem.backBarButtonItem = UIBarButtonItem(title: nil, style: .plain, target: self, action: nil)
         nav.navigationItem.backBarButtonItem?.tintColor = .black
         
